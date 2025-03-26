@@ -56,6 +56,6 @@ def test_delete_posts():
     response = requests.delete('https://jsonplaceholder.typicode.com/posts/42')
     print(response.json())
     print(response.status_code)
-    print('loh')
+    print('lohjbug')
 
 test_delete_posts()
