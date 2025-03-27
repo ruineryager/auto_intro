@@ -1,9 +1,12 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 from time import sleep
 
 def test_sale():
-    browser = webdriver.Firefox()
+    options=Options()
+    options.add_argument('--headless')
+    browser = webdriver.Firefox(options=options)
     browser.get('https://magento.softwaretestingboard.com/')
     sleep(1)
     sale_link = browser.find_element(By.ID, 'ui-id-8')
